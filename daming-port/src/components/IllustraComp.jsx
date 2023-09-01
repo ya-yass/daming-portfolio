@@ -2,6 +2,7 @@
 import { Box } from "@mui/material"
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Grid from '@mui/material/Grid';
 
 import './IllustraComp.scss'
 
@@ -9,16 +10,18 @@ const IllustraComp = () => {
   return (
     <>
       <Box>
-      <div>
+        <div>
           <h1 className='title'>Illustrations</h1>
-          <ImageList variant="masonry" cols={3} gap={8}>
+
+          <ImageList variant="masonry" cols={3} gap={7} component= "Grid" className="big-feed">
             {itemData.map((item) => (
               <ImageListItem key={item.img}>
                 <img
-                  src={`${item.img}?w=248&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.img}?w=460&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=460&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
                   loading="lazy"
+                  className="feed-image"
                 />
               </ImageListItem>
             ))}
