@@ -4,15 +4,15 @@ import './Default.scss'
 //components
 import Sidebar from "../components/Sidebar"
 
-const Home = () => {
+const Comic = () => {
   return (
     <>
       <Box component='div' className='body'>
         <Sidebar/>
-        Home works!
+        Mini Comic works!
       </Box>
     </>
   )
 }
 
-export default Home
+export default Comic
