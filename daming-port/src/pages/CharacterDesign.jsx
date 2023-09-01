@@ -3,13 +3,14 @@ import './Default.scss'
 
 //components
 import Sidebar from "../components/Sidebar"
+import CharacterDesignComp from '../components/CharacterDesignComp';
 
 const CharacterDesign = () => {
   return (
     <>
       <Box component='div' className='body'>
         <Sidebar/>
-        Character Design works!
+        <CharacterDesignComp/>
       </Box>
     </>
   )
