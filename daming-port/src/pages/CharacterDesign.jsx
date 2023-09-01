@@ -9,7 +9,7 @@ const CharacterDesign = () => {
     <>
       <Box component='div' className='body'>
         <Sidebar/>
-        Mini Comic works!
+        Character Design works!
       </Box>
     </>
   )

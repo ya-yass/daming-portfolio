@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar"
 const Home = () => {
   return (
     <>
-      <Box component='div' className='body'>
+      <Box component='container' className='body'>
         <Sidebar/>
         Home works!
       </Box>
