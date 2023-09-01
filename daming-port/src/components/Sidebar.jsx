@@ -19,7 +19,7 @@ const Sidebar = () => {
         <img className="profile-icon" src={profileIcon} alt="Daming's profile icon" />
 
         <div className="links">
-          <Link to="/illustrations" className="illustrations-link">Illustrations</Link>
+          <Link to="/" className="illustrations-link">Illustrations</Link>
           <Link to="/character-design" className="character-link">Character Design</Link>
           <Link to="/mini-comic" className="comic-link">Mini Comic</Link>
         </div> 

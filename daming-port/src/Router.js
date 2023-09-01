@@ -7,8 +7,8 @@ import Comic from './pages/Comic'
 const Router = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/illustrations" element={<Illustrations />} />
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Illustrations />} />
             <Route path="/character-design" element={<CharacterDesign />} />
             <Route path="/mini-comic" element={<Comic />} />
         </Routes>
