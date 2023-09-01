@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +22,18 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
+
+import Router from './Router'
+// import Initialization from './components/initialization'
+
+const App = () => {
+  return (
+    <>
+      {/* <Initialization/> */}
+      <Router />
+    </>
+  )
+}
+
+export default App
