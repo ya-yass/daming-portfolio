@@ -1,8 +1,9 @@
 //assets
 import { Box } from "@mui/material"
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import Grid from '@mui/material/Grid';
+// import ImageList from '@mui/material/ImageList';
+// import ImageListItem from '@mui/material/ImageListItem';
+// import Grid from '@mui/material/Grid';
+import Lightbox from "./Lightbox";
 
 import './IllustraComp.scss'
 
@@ -13,6 +14,11 @@ const IllustraComp = () => {
         <div>
           <h1 className='title'>Illustrations</h1>
 
+          <Lightbox imageUrl= {Lightbox.art01} altText="Descrição da imagem" />
+          <Lightbox imageUrl= {Lightbox.art02} altText="Descrição da imagem" />
+          <Lightbox imageUrl= {Lightbox.art03} altText="Descrição da imagem" />
+
+          {/* 
           <ImageList variant="masonry" cols={3} gap={7} component= "Grid" className="big-feed">
             {itemData.map((item) => (
               <ImageListItem key={item.img}>
@@ -25,13 +31,14 @@ const IllustraComp = () => {
                 />
               </ImageListItem>
             ))}
-          </ImageList>
+          </ImageList> */}
         </div>
       </Box>
     </>
   )
 }
 
+/*
 const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
@@ -81,6 +88,6 @@ const itemData = [
     img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4',
     title: 'Coffee table',
   },
-];
+];*/
 
 export default IllustraComp
