@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-import art01 from './assets/img/art01.jpg'
-import art02 from './assets/img/art02.png'
-import art03 from './assets/img/art03.jpg'
+// import art01 from './assets/img/art01.jpg'
+// import art02 from './assets/img/art02.png'
+// import art03 from './assets/img/art03.jpg'
 
+/* 
 function Lightbox({ imageUrl, altText }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,6 +28,21 @@ function Lightbox({ imageUrl, altText }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+export default Lightbox;*/
+
+function Lightbox({ images, currentIndex, onClose }) {
+  const currentImage = images[currentIndex];
+
+  return (
+    <div className="lightbox">
+      <div className="lightbox-content">
+        <img src={currentImage} alt={`Imagem ${currentIndex + 1}`} />
+        <button onClick={onClose}>Fechar</button>
+      </div>
     </div>
   );
 }

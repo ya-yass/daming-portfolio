@@ -3,9 +3,21 @@ import { Box } from "@mui/material"
 // import ImageList from '@mui/material/ImageList';
 // import ImageListItem from '@mui/material/ImageListItem';
 // import Grid from '@mui/material/Grid';
-import Lightbox from "./Lightbox";
+// import Lightbox from "./Lightbox";
 
 import './IllustraComp.scss'
+
+import Galeria from './Galeria';
+import art01 from './assets/img/art01.jpg'
+import art02 from './assets/img/art02.png'
+import art03 from './assets/img/art03.jpg'
+
+const imagens = [
+  art01,
+  art02,
+  art03,
+  // Adicione mais URLs de imagens conforme necessário
+];
 
 const IllustraComp = () => {
   return (
@@ -14,9 +26,13 @@ const IllustraComp = () => {
         <div>
           <h1 className='title'>Illustrations</h1>
 
-          <Lightbox imageUrl= {Lightbox.art01} altText="Descrição da imagem" />
+          {/* <Lightbox imageUrl= {Lightbox.art01} altText="Descrição da imagem" />
           <Lightbox imageUrl= {Lightbox.art02} altText="Descrição da imagem" />
-          <Lightbox imageUrl= {Lightbox.art03} altText="Descrição da imagem" />
+          <Lightbox imageUrl= {Lightbox.art03} altText="Descrição da imagem" /> */}
+
+
+          <Galeria images={imagens} />
+
 
           {/* 
           <ImageList variant="masonry" cols={3} gap={7} component= "Grid" className="big-feed">
