@@ -1,16 +1,13 @@
 //assets
 import { Box } from "@mui/material"
-// import ImageList from '@mui/material/ImageList';
-// import ImageListItem from '@mui/material/ImageListItem';
-// import Grid from '@mui/material/Grid';
-import Lightbox from "./Lightbox";
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 import './IllustraComp.scss'
+import art01 from './assets/img/art01.jpg'
+import art02 from './assets/img/art02.png'
+import art03 from './assets/img/art03.jpg'
 
-// import Galeria from './Galeria';
-// import art01 from './assets/img/art01.jpg'
-// import art02 from './assets/img/art02.png'
-// import art03 from './assets/img/art03.jpg'
 
 const IllustraComp = () => {
   return (
@@ -19,26 +16,56 @@ const IllustraComp = () => {
         <div>
           <h1 className='title'>Illustrations</h1>
 
-          {/* <Lightbox imageUrl= {Lightbox.art01} altText="Descrição da imagem" />
-          <Lightbox imageUrl= {Lightbox.art02} altText="Descrição da imagem" />
-          <Lightbox imageUrl= {Lightbox.art03} altText="Descrição da imagem" /> */}
+          <Box variant="masonry" cols={3} gap={8} component = {ImageList}>
 
-          <Lightbox/>
-
-          {/* 
-          <ImageList variant="masonry" cols={3} gap={7} component= "Grid" className="big-feed">
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=460&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=460&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  className="feed-image"
-                />
+            <a href={art01}>
+              <ImageListItem>
+                  <img src={art01}  alt="Imagem 1"/>
               </ImageListItem>
-            ))}
-          </ImageList> */}
+            </a>
+
+            <a href={art02}>
+              <ImageListItem>
+                  <img src={art02}  alt="Imagem 1"/>
+              </ImageListItem>
+            </a>
+
+            <a href={art03}>
+              <ImageListItem>
+                  <img src={art03}  alt="Imagem 1"/>
+              </ImageListItem>
+            </a>
+
+            <a href={art01}>
+              <ImageListItem>
+                  <img src={art01}  alt="Imagem 1"/>
+              </ImageListItem>
+            </a>
+
+            <a href={art02}>
+              <ImageListItem>
+                  <img src={art02}  alt="Imagem 1"/>
+              </ImageListItem>
+            </a>
+
+            <a href={art03}>
+              <ImageListItem>
+                  <img src={art03}  alt="Imagem 1"/>
+              </ImageListItem>
+            </a>
+
+            <a href={art01}>
+              <ImageListItem>
+                  <img src={art01}  alt="Imagem 1"/>
+              </ImageListItem>
+            </a>
+
+            <a href={art02}>
+              <ImageListItem>
+                  <img src={art02}  alt="Imagem 1"/>
+              </ImageListItem>
+            </a>            
+          </Box>
         </div>
       </Box>
     </>
