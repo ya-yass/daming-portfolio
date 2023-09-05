@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 // import art03 from './assets/img/art03.jpg'
 
 import Glightbox from 'glightbox';
-import 'glightbox/dist/css/glightbox.css'; // Importe o arquivo CSS
+import './Lightbox.scss'; 
 
 import art01 from './assets/img/art01.jpg'
 import art02 from './assets/img/art02.png'
