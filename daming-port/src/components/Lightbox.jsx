@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-
-
-// import art01 from './assets/img/art01.jpg'
-// import art02 from './assets/img/art02.png'
-// import art03 from './assets/img/art03.jpg'
-
+import { Box } from "@mui/material"
 import Glightbox from 'glightbox';
 import './Lightbox.scss'; 
 
@@ -38,19 +33,43 @@ function GaleriaLightbox() {
   }, []);
 
   return (
-    <div>
-      <a href={art01} data-glightbox="galeria">
-      <img src={art01}  alt="Imagem 1" />
-    </a>
+    <Box className="galery-box">
+        <a href={art01} data-glightbox="galeria">
+          <img src={art01}  alt="Imagem 1" className='image-feed' />
+        </a>
 
-    <a href={art02} data-glightbox="galeria">
-      <img src={art02}  alt="Imagem 2" />
-    </a>
+        <a href={art02} data-glightbox="galeria">
+          <img src={art02}  alt="Imagem 2" className='image-feed' />
+        </a>
 
-    <a href={art03} data-glightbox="galeria">
-      <img src={art03} alt="Imagem 3" />
-    </a>
-    </div>
+        <a href={art03} data-glightbox="galeria">
+          <img src={art03} alt="Imagem 3" className='image-feed' />
+        </a>
+
+        <a href={art01} data-glightbox="galeria">
+          <img src={art01}  alt="Imagem 1" className='image-feed' />
+        </a>
+
+        <a href={art02} data-glightbox="galeria">
+          <img src={art02}  alt="Imagem 2" className='image-feed' />
+        </a>
+
+        <a href={art03} data-glightbox="galeria">
+          <img src={art03} alt="Imagem 3" className='image-feed' />
+        </a>
+
+        <a href={art01} data-glightbox="galeria">
+          <img src={art01}  alt="Imagem 1" className='image-feed'/>
+        </a>
+
+        <a href={art02} data-glightbox="galeria">
+          <img src={art02}  alt="Imagem 2" className='image-feed' />
+        </a>
+
+        <a href={art03} data-glightbox="galeria">
+          <img src={art03} alt="Imagem 3" className='image-feed' />
+        </a>
+    </Box>
   );
 }
 

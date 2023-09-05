@@ -2,9 +2,7 @@
 import { Box } from "@mui/material"
 import { Link } from 'react-router-dom'
 import './Sidebar.scss'
-// import { TreeView, TreeItem } from '@mui/lab';
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import Grid from '@mui/material/Grid';
 
 //files
 import profileIcon from "./assets/img/profileIcon.jpeg"
@@ -29,8 +27,6 @@ const Sidebar = () => {
           <img src={instagram} alt="X" className="social-media instagram"/>
           <img src={twitter} alt="X" className="social-media teitter"/>
         </div>
-        
-
       </div>
     </Box>
   )
