@@ -16,112 +16,88 @@ const IllustraComp = () => {
         <div>
           <h1 className='title'>Illustrations</h1>
 
-          <Box variant="masonry" cols={3} gap={8} component = {ImageList}>
+          <ImageList variant="masonry" cols={3} gap={8} className="image-feed-box">
 
-            <a href={art01}>
-              <ImageListItem>
-                  <img src={art01}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>
+            {itemData.map((item) => (
+              <a href={item.img} target="_blank" rel="noreferrer">           
 
-            <a href={art02}>
-              <ImageListItem>
-                  <img src={art02}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>
+                <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  className="image-feed"
+                />
+                </ImageListItem>
+              </a>
+              ))
+            }
 
-            <a href={art03}>
-              <ImageListItem>
-                  <img src={art03}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>
-
-            <a href={art01}>
-              <ImageListItem>
-                  <img src={art01}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>
-
-            <a href={art02}>
-              <ImageListItem>
-                  <img src={art02}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>
-
-            <a href={art03}>
-              <ImageListItem>
-                  <img src={art03}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>
-
-            <a href={art01}>
-              <ImageListItem>
-                  <img src={art01}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>
-
-            <a href={art02}>
-              <ImageListItem>
-                  <img src={art02}  alt="Imagem 1"/>
-              </ImageListItem>
-            </a>            
-          </Box>
+          </ImageList>
         </div>
       </Box>
     </>
   )
 }
 
-/*
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
-    title: 'Bed',
+    img: art01,
+    title: 'arte 1',
+  },
+  { 
+    img: art02,
+    title: 'arte 2',
   },
   {
-    img: 'https://images.unsplash.com/photo-1525097487452-6278ff080c31',
-    title: 'Books',
+    img: art03,
+    title: 'arte 3'
   },
   {
-    img: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6',
-    title: 'Sink',
+    img: art01,
+    title: 'arte 1',
+  },
+  { 
+    img: art02,
+    title: 'arte 2',
   },
   {
-    img: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3',
-    title: 'Kitchen',
+    img: art03,
+    title: 'arte 3'
   },
   {
-    img: 'https://images.unsplash.com/photo-1588436706487-9d55d73a39e3',
-    title: 'Blinds',
+    img: art01,
+    title: 'arte 1',
+  },
+  { 
+    img: art02,
+    title: 'arte 2',
   },
   {
-    img: 'https://images.unsplash.com/photo-1574180045827-681f8a1a9622',
-    title: 'Chairs',
+    img: art03,
+    title: 'arte 3'
   },
   {
-    img: 'https://images.unsplash.com/photo-1530731141654-5993c3016c77',
-    title: 'Laptop',
+    img: art01,
+    title: 'arte 1',
+  },
+  { 
+    img: art02,
+    title: 'arte 2',
   },
   {
-    img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
-    title: 'Doors',
+    img: art03,
+    title: 'arte 3'
   },
-  {
-    img: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7',
-    title: 'Coffee',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee',
-    title: 'Storage',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62',
-    title: 'Candle',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4',
-    title: 'Coffee table',
-  },
-];*/
+]
+
+/* <a href={item.img}>
+  <ImageListItem>
+      <img src={art01}  alt="Imagem 1"/>
+  </ImageListItem>
+</a> */
+
+
 
 export default IllustraComp
