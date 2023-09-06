@@ -1,0 +1,47 @@
+:root {
+  --darktext: #434343;
+  --lightext: #b9b9b9;
+  --active: #dddddd;
+  --darkbg: #292929;
+  --secundary: #907fe5;
+}
+
+.body-body{
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  .container-content{
+    display: flex;
+
+    h3{
+      margin: 0;
+    }
+
+    .details{
+      color: var(--lightext);
+      margin-bottom: 15px;
+      margin-top: 3px;
+    }
+
+    p{
+      margin: 8px 0;
+    }
+  
+    .profile-pic{
+    object-fit: cover;
+    height: 350px;
+    width: 250px;
+    border-radius: 15px;
+    margin-right: 30px;
+    }
+  
+    .footer-content{
+      display: flex;
+    }
+  }
+
+}
