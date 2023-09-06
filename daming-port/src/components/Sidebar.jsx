@@ -14,13 +14,16 @@ const Sidebar = () => {
   return (
     <Box className="sidenav">
       <div className="content">
-        <img className="profile-icon" src={profileIcon} alt="Daming's profile icon" />
+        <div className="profile-info">
+          <img className="profile-icon" src={profileIcon} alt="Daming's profile icon" />
+          <p className="work">2D Illustrator</p>
+        </div>
 
         <div className="links">
           <NavLink to="/" activeClassName="active" >Illustrations</NavLink>
           <NavLink to="/character-design" >Character Design</NavLink>
           <NavLink to="/mini-comic" activeClassName="active">Mini Comic</NavLink>
-          <NavLink to="about-me" className="about-link">About me</NavLink>
+          <NavLink to="/about-me" activeClassName="active" className="about-link">About me</NavLink>
         </div> 
 
         <div className="social">

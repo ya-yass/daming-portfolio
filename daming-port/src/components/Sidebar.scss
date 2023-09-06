@@ -24,15 +24,22 @@
   flex-direction: column;
   align-items: center;
 
-  .profile-icon{
-    width: 150px;
-    height: 150px;
-    border-radius: 30%;
-    padding: 6px;
-    border: 2px solid #b9b9b9;
-  }
-  .css-1g86id8-MuiTreeItem-content{
-    flex-direction: row-reverse;
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .work{
+      color: #ffffff3b;
+    }
+
+    .profile-icon{
+      width: 150px;
+      height: 150px;
+      border-radius: 30%;
+      padding: 6px;
+      border: 2px solid #b9b9b9;
+    }
   }
 
   .links{
