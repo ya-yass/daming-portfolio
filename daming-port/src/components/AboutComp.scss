@@ -14,6 +14,10 @@
   width: 100%;
   position: absolute;
 
+  .content-content{
+    width: 1000px;
+  }
+
   .container-content{
     display: flex;
 
@@ -41,6 +45,21 @@
   
     .footer-content{
       display: flex;
+      text-decoration: none;
+
+      #commission-me{
+        color: white;
+        background-color: var(--secundary);
+        padding: 9px 25px;
+        border-radius: 50px;
+      }
+      .link{
+        color: var(--secundary);
+        border: 2px solid var(--secundary);
+        border-radius: 50px;
+        padding: 9px 25px;
+        margin-right: 10px;
+      }
     }
   }
 

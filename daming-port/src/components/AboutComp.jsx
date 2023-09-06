@@ -25,10 +25,10 @@ const AboutComp = () => {
               <p>For commission’s info, price and terms, contact me on ddamingg@gmail.com.</p>
 
               <div className="footer-content">
-                <a href="mailto:seu-email@example.com">Commission me</a>
-                <Link to="/" >Illustrations</Link>
-                <Link to="/character-design" >Character Desing</Link>
-                <Link to="/mini-comic" >Mini Comics</Link>
+                <a href="mailto:seu-email@example.com" id="commission-me" className="link">Commission me</a>
+                <Link to="/" className="link" >Illustrations</Link>
+                <Link to="/character-design" className="link" >Character Desing</Link>
+                <Link to="/mini-comic" className="link" >Mini Comics</Link>
               </div>
             </div>
           </div>
