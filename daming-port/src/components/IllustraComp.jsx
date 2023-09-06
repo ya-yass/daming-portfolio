@@ -25,17 +25,19 @@ const IllustraComp = () => {
       <h1 className='title'>Illustrations</h1>
       <ImageList variant="masonry" cols={3} gap={8} className="image-feed-box">
         {itemData.map((item) => (
-          <a key={item.img} href={item.img} target="_blank" rel="noreferrer">           
-            <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-                className="image-feed"
-              />
-            </ImageListItem>
-          </a>
+          <div className="img-component"> 
+            <a key={item.img} href={item.img} target="_blank" rel="noreferrer" className="img-link">           
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  className="image-feed"
+                />
+              </ImageListItem>
+            </a>
+          </div>
           ))
         }
       </ImageList>

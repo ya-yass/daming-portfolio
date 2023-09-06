@@ -3,7 +3,6 @@ import { Box } from "@mui/material"
 import { NavLink } from 'react-router-dom';
 import './Sidebar.scss'
 import Tooltip from '@mui/material/Tooltip';
-import Fade from '@mui/material/Fade';
 
 //files
 import profileIcon from "./assets/img/profileIcon.jpeg"

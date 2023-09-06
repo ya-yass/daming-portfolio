@@ -1,4 +1,22 @@
-.image-feed{
+.img-component{
+  overflow: clip;
   border-radius: 15px;
-}
 
+  background: #000000;
+
+  .image-feed{
+    margin-left: 15px;
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+    height: 100%;
+    width: 100%;
+  
+    opacity: 1;
+  }
+  
+  .image-feed:hover{
+    margin-left: 0;
+  
+    opacity: .8;
+  }
+}
