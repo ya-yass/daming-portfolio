@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
 import Illustrations from './pages/Illustrations'
 import CharacterDesign from './pages/CharacterDesign'
 import Comic from './pages/Comic'
+import AboutMe from './pages/AboutMe'
 
 const Router = () => {
     return (
@@ -11,6 +11,7 @@ const Router = () => {
             <Route path="/" element={<Illustrations />} />
             <Route path="/character-design" element={<CharacterDesign />} />
             <Route path="/mini-comic" element={<Comic />} />
+            <Route path="/about-me" element={<AboutMe />} />
         </Routes>
     )
 }

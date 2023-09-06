@@ -2,7 +2,6 @@
 import { Box } from "@mui/material"
 import { Link } from 'react-router-dom'
 import './Sidebar.scss'
-import Grid from '@mui/material/Grid';
 
 //files
 import profileIcon from "./assets/img/profileIcon.jpeg"
@@ -20,6 +19,7 @@ const Sidebar = () => {
           <Link to="/" className="illustrations-link">Illustrations</Link>
           <Link to="/character-design" className="character-link">Character Design</Link>
           <Link to="/mini-comic" className="comic-link">Mini Comic</Link>
+          <Link to="about-me" className="about-link">About me</Link>
         </div> 
 
         <div className="social">

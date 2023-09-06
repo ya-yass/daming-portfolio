@@ -2,6 +2,7 @@
   --darktext: #434343;
   --lightext: #b9b9b9;
   --darkbg: #292929;
+  --secundary: #907fe5;
 }
 
 .sidenav{
@@ -42,7 +43,16 @@
     a{
       color: var(--lightext);
       margin: 0 0 9px 0;
+      transition: 0.2s;
     }
+
+    .about-link{
+      color: var(--secundary);
+    }
+  }
+  
+  a.hover {
+    color: white;
   }
 
   .social{
