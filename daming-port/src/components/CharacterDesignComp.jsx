@@ -10,7 +10,7 @@ const CharacterDesignComp = () => {
         <div>
           <h1 className='title'>Character Design</h1>
 
-          <ImageList variant="masonry" cols={3} gap={7} component= "Grid" className="big-feed">
+          <ImageList variant="masonry" cols={3} gap={7} className="big-feed">
             {itemData.map((item) => (
               <ImageListItem key={item.img}>
                 <img

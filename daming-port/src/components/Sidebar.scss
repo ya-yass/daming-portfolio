@@ -1,6 +1,7 @@
 :root {
   --darktext: #434343;
   --lightext: #b9b9b9;
+  --active: #dddddd;
   --darkbg: #292929;
   --secundary: #907fe5;
 }
@@ -44,6 +45,7 @@
       color: var(--lightext);
       margin: 0 0 9px 0;
       transition: 0.2s;
+      padding: 0 4px;
     }
 
     .about-link{
@@ -51,8 +53,14 @@
     }
   }
   
-  a.hover {
+  a:hover {
     color: white;
+  }
+
+  a.active {
+    font-weight: bold;
+    color: var(--active) ;
+    border-left: 4px solid var(--lightext);
   }
 
   .social{
@@ -62,6 +70,11 @@
     .social-media{
       width: 34px;
       border-radius: 50%;
+      margin: 0 5px;
+    }
+
+    .instagram{
+      width: 36px;
     }
   }
 }

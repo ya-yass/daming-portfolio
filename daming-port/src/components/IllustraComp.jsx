@@ -25,7 +25,7 @@ const IllustraComp = () => {
       <h1 className='title'>Illustrations</h1>
       <ImageList variant="masonry" cols={3} gap={8} className="image-feed-box">
         {itemData.map((item) => (
-          <a href={item.img} target="_blank" rel="noreferrer">           
+          <a key={item.img} href={item.img} target="_blank" rel="noreferrer">           
             <ImageListItem key={item.img}>
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}

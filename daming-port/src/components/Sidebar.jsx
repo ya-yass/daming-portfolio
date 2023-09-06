@@ -1,12 +1,14 @@
 //assets
 import { Box } from "@mui/material"
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import './Sidebar.scss'
+import Tooltip from '@mui/material/Tooltip';
+import Fade from '@mui/material/Fade';
 
 //files
 import profileIcon from "./assets/img/profileIcon.jpeg"
 import kofi from './assets/img/kofi.png'
-import instagram from './assets/img/instagram.webp'
+import instagram from './assets/img/instagram.png'
 import twitter from './assets/img/twitter.png'
 
 const Sidebar = () => {
@@ -16,16 +18,45 @@ const Sidebar = () => {
         <img className="profile-icon" src={profileIcon} alt="Daming's profile icon" />
 
         <div className="links">
-          <Link to="/" className="illustrations-link">Illustrations</Link>
-          <Link to="/character-design" className="character-link">Character Design</Link>
-          <Link to="/mini-comic" className="comic-link">Mini Comic</Link>
-          <Link to="about-me" className="about-link">About me</Link>
+          <NavLink to="/" activeClassName="active" >Illustrations</NavLink>
+          <NavLink to="/character-design" >Character Design</NavLink>
+          <NavLink to="/mini-comic" activeClassName="active">Mini Comic</NavLink>
+          <NavLink to="about-me" className="about-link">About me</NavLink>
         </div> 
 
         <div className="social">
-          <img src={kofi} alt="X" className="social-media kofi"/>
-          <img src={instagram} alt="X" className="social-media instagram"/>
-          <img src={twitter} alt="X" className="social-media teitter"/>
+          <Tooltip
+            title="Kofi page"
+            enterDelay={800}
+            placement="top"
+            disableInteractive
+            >
+            <a href="https://ko-fi.com/daming" target="_blank" rel="noreferrer">
+              <img src={kofi} alt="X" className="social-media kofi"/>
+            </a>
+          </Tooltip>
+
+          <Tooltip
+            title="Instagram"
+            enterDelay={800}
+            placement="top"
+            disableInteractive
+            >
+            <a href="https://www.instagram.com/da._ming/" alt="https://www.instagram.com/da._ming/" target="_blank" rel="noreferrer"> 
+              <img src={instagram} alt="X" className="social-media instagram"/>
+            </a>
+          </Tooltip>
+
+          <Tooltip
+            title="Twitter"
+            enterDelay={800}
+            placement="top"
+            disableInteractive
+            > 
+            <a href="https://twitter.com/da_mingg" alt="https://www.instagram.com/da._ming/" target="_blank" rel="noreferrer">
+              <img src={twitter} alt="X" className="social-media twitter"/>
+            </a>
+          </Tooltip>
         </div>
       </div>
     </Box>
