@@ -1,16 +1,86 @@
+:root {
+  --darktext: #434343;
+  --lightext: #b9b9b9;
+  --active: #dddddd;
+  --darkbg: #292929;
+  --secundary: #907fe5;
+}
+
 .drawer-navbar {
   display: flex;
-  flex-direction: row-reverse;
+  padding: 13px 50px;
+  background-color: var(--darkbg);
+  justify-content: space-between;
 
   .hamburguer{
-    background-color: white !important;
-    color: #16ac8b;
+    color: var(--lightext);
+    margin-right: -20px;
   }
-  .css-le6y48t-MuiButtonBase-root-MuiButton-root:active{
+  .css-le6y48t-MuiButtonBase-root-MuiButton-root{
     background-color: none !important;
   }
-  .hamburguer:focus{
-    background-color: #FFF;
-    
+  .hamburguer:active{
+    background-color: #FFF  !important;
   }
+
+  .profile-pic{
+    width: 50px;
+    border-radius: 30%;
+    padding: 3px;
+    border: 1px solid #b9b9b9;
+  }
+
+}
+
+.sidenav-bar{
+  background-color: var(--darkbg);
+  height: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .links{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a{
+      color: var(--lightext);
+      margin: 0 0 9px 0;
+      transition: 0.2s;
+      padding: 0 4px;
+    }
+
+    .about-link{
+      color: var(--secundary);
+    }
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  a.active {
+    font-weight: bold;
+    color: var(--active) ;
+    border-left: 4px solid var(--lightext);
+  }
+
+  .social{
+    bottom: 44px;
+    position: fixed;
+  
+    .social-media{
+      width: 34px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+  
+    .instagram{
+      width: 36px;
+    }
+  }
+
 }
