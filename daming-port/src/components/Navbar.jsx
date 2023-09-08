@@ -7,7 +7,7 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 // files
 import './Navbar.scss'
 
-export default function TemporaryDrawer() {
+const Navbar = () => {
   const [state, setState] = React.useState({
     right: false,
   });
@@ -53,3 +53,5 @@ export default function TemporaryDrawer() {
     </div>
   );
 }
+
+export default Navbar
