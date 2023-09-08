@@ -1,7 +1,6 @@
 //assets
 import { Box } from "@mui/material"
 import { NavLink } from 'react-router-dom';
-import './Sidebar.scss'
 import Tooltip from '@mui/material/Tooltip';
 
 //files
@@ -9,7 +8,7 @@ import profileIcon from "./assets/img/profileIcon.jpeg"
 import kofi from './assets/img/kofi.png'
 import instagram from './assets/img/instagram.png'
 import twitter from './assets/img/twitter.png'
-// import Navbar from './Navbar'
+import './Sidebar.scss'
 
 const Sidebar = () => {
   return (
