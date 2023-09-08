@@ -7,10 +7,9 @@
 }
 
 .drawer-navbar {
-  display: flex;
   padding: 13px 50px;
   background-color: var(--darkbg);
-  justify-content: space-between;
+  display: none;
 
   .hamburguer{
     color: var(--lightext);
@@ -82,5 +81,11 @@
       width: 36px;
     }
   }
+}
 
+@media (max-width: 1000px) {
+  .drawer-navbar{
+    display: flex;
+    justify-content: space-between;
+  }
 }

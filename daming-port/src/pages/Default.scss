@@ -49,3 +49,9 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-button {
   display:none;
 }
+
+@media (max-width: 1000px) {
+  .body{
+    margin-left: 0;
+  }
+}
