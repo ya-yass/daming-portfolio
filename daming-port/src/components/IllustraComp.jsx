@@ -6,19 +6,36 @@ import ImageListItem from '@mui/material/ImageListItem';
 // files
 import './IllustraComp.scss'
 import './DefaultComp.scss'
-import art01 from './assets/img/art01.jpg'
-import art02 from './assets/img/art02.png'
-import art03 from './assets/img/art03.jpg'
-import art04 from './assets/img/art04.png'
-import art05 from './assets/img/art05.jpg'
-import art06 from './assets/img/art06.jpg'
-import art07 from './assets/img/art07.jpg'
-import art08 from './assets/img/art08.jpg'
-import art09 from './assets/img/art09.jpg'
-import art10 from './assets/img/art10.jpg'
-import art11 from './assets/img/art11.jpg'
-import art12 from './assets/img/art12.jpg'
-import art13 from './assets/img/art13.jpg'
+
+// high-quality
+// import art01 from './assets/img/art01.jpg'
+// import art02 from './assets/img/art02.png'
+// import art03 from './assets/img/art03.jpg'
+// import art04 from './assets/img/art04.png'
+// import art05 from './assets/img/art05.jpg'
+// import art06 from './assets/img/art06.jpg'
+// import art07 from './assets/img/art07.jpg'
+// import art08 from './assets/img/art08.jpg'
+// import art09 from './assets/img/art09.jpg'
+// import art10 from './assets/img/art10.jpg'
+// import art11 from './assets/img/art11.jpg'
+// import art12 from './assets/img/art12.jpg'
+// import art13 from './assets/img/art13.jpg'
+
+// low-quality
+import art1 from './assets/img/low-quality/art1.jpeg'
+import art2 from './assets/img/low-quality/art2.jpeg'
+import art3 from './assets/img/low-quality/art3.jpeg'
+import art4 from './assets/img/low-quality/art4.jpeg'
+import art5 from './assets/img/low-quality/art5.jpeg'
+import art6 from './assets/img/low-quality/art6.jpeg'
+import art7 from './assets/img/low-quality/art7.jpeg'
+import art8 from './assets/img/low-quality/art8.jpeg'
+import art9 from './assets/img/low-quality/art9.jpeg'
+import art010 from './assets/img/low-quality/art10.jpeg'
+import art011 from './assets/img/low-quality/art11.jpeg'
+import art012 from './assets/img/low-quality/art12.jpeg'
+import art013 from './assets/img/low-quality/art13.jpeg'
 
 
 const IllustraComp = () => {
@@ -68,55 +85,55 @@ const IllustraComp = () => {
 
 const itemData = [
   {
-    img: art01,
+    img: art1,
     title: 'arte 1',
   },
   { 
-    img: art02,
+    img: art2,
     title: 'arte 2',
   },
   {
-    img: art05,
+    img: art5,
     title: 'arte 3'
   },
   {
-    img: art04,
+    img: art4,
     title: 'arte 1',
   },
   { 
-    img: art13,
+    img: art013,
     title: 'arte 2',
   },
   {
-    img: art06,
+    img: art6,
     title: 'arte 3'
   },
   {
-    img: art07,
+    img: art7,
     title: 'arte 1',
   },
   { 
-    img: art08,
+    img: art8,
     title: 'arte 2',
   },
   {
-    img: art09,
+    img: art9,
     title: 'arte 3'
   },
   {
-    img: art10,
+    img: art010,
     title: 'arte 1',
   },
   { 
-    img: art11,
+    img: art011,
     title: 'arte 2',
   },
   {
-    img: art12,
+    img: art012,
     title: 'arte 3'
   },
   {
-    img: art03,
+    img: art3,
     title: 'arte 3'
   },
 ]
