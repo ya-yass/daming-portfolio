@@ -1,3 +1,11 @@
+:root {
+  --darktext: #434343;
+  --lightext: #b9b9b9;
+  --active: #dddddd;
+  --darkbg: #292929;
+  --secundary: #907fe5;
+}
+
 * {
   font-family: 'Varela Round', sans-serif;
   text-decoration: none;
@@ -8,6 +16,15 @@
   margin-left: 15%;
   padding: 70px 40px;
 }
+
+p, span, h1, h2, h3, h4{
+  color: var(--darkbg);
+}
+
+p{
+  margin: 8px 0;
+}
+
 
 h1{
   font-family: 'Lobster', cursive;
@@ -50,7 +67,14 @@ body::-webkit-scrollbar-button {
   display:none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 550px) {
+  .body {
+    padding: 40px 20px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 1000px) {
   .body{
     margin-left: 0;
   }

@@ -2,15 +2,16 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 
-import './Default.scss'
-
-//components
+//files
 import Sidebar from "../components/Sidebar"
 import IllustraComp from '../components/IllustraComp'
+import Navbar from '../components/Navbar'
+import './Default.scss'
 
 const Illustrations = () => {
   return (
     <>
+      <Navbar/>
       <Box className="body">
         <Sidebar/>
         <IllustraComp />

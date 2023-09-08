@@ -3,81 +3,90 @@ import { Box } from "@mui/material"
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
+// files
+import './DefaultComp.scss'
+import art14 from './assets/img/art14.jpg'
+import art15 from './assets/img/art15.jpg'
+import art16 from './assets/img/art16.jpg'
+import art17 from './assets/img/art17.jpg'
+import art18 from './assets/img/art18.jpg'
+import art19 from './assets/img/art19.jpg'
+import art20 from './assets/img/art20.png'
+
 const CharacterDesignComp = () => {
   return (
-    <>
-      <Box>
-        <div>
-          <h1 className='title'>Character Design</h1>
-
-          <ImageList variant="masonry" cols={3} gap={7} className="big-feed">
-            {itemData.map((item) => (
+    <Box>
+      <h1 className='title'>Character Design</h1>
+      <ImageList variant="masonry" cols={3} gap={8} id="big-image-feed-box">
+        {itemData.map((item) => (
+          <div className="img-component"> 
+            <a key={item.img} href={item.img} target="_blank" rel="noreferrer" className="img-link">           
               <ImageListItem key={item.img}>
                 <img
-                  src={`${item.img}?w=460&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=460&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
                   loading="lazy"
-                  className="feed-image"
+                  className="image-feed"
                 />
               </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      </Box>
-    </>
+            </a>
+          </div>
+          ))
+        }
+      </ImageList>
+
+      <ImageList variant="masonry" cols={2} gap={7} id="sm-image-feed-box">
+        {itemData.map((item) => (
+          <div className="img-component"> 
+            <a key={item.img} href={item.img} target="_blank" rel="noreferrer" className="img-link">           
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  className="image-feed"
+                />
+              </ImageListItem>
+            </a>
+          </div>
+          ))
+        }
+      </ImageList>
+    </Box>
   )
 }
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
-    title: 'Bed',
+    img: art14,
+    title: 'arte 1',
+  },
+  { 
+    img: art15,
+    title: 'arte 2',
   },
   {
-    img: 'https://images.unsplash.com/photo-1525097487452-6278ff080c31',
-    title: 'Books',
+    img: art16,
+    title: 'arte 3'
   },
   {
-    img: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6',
-    title: 'Sink',
+    img: art17,
+    title: 'arte 1',
+  },
+  { 
+    img: art18,
+    title: 'arte 2',
   },
   {
-    img: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3',
-    title: 'Kitchen',
+    img: art19,
+    title: 'arte 3'
   },
   {
-    img: 'https://images.unsplash.com/photo-1588436706487-9d55d73a39e3',
-    title: 'Blinds',
+    img: art20,
+    title: 'arte 1',
   },
-  {
-    img: 'https://images.unsplash.com/photo-1574180045827-681f8a1a9622',
-    title: 'Chairs',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1530731141654-5993c3016c77',
-    title: 'Laptop',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
-    title: 'Doors',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7',
-    title: 'Coffee',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee',
-    title: 'Storage',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62',
-    title: 'Candle',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4',
-    title: 'Coffee table',
-  },
-];
+]
 
 export default CharacterDesignComp
