@@ -2,6 +2,8 @@
 import { Box } from "@mui/material"
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 
 // files
 import './IllustraComp.scss'
@@ -39,28 +41,111 @@ import art013 from './assets/img/low-quality/art13.jpeg'
 
 
 const IllustraComp = () => {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (itemData) => {
+    setSelectedImage(itemData);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setModalIsOpen(false);
+  };
+
+  const itemData = [
+    {
+      img: art1,
+      title: 'arte 1',
+    },
+    { 
+      img: art2,
+      title: 'arte 2',
+    },
+    {
+      img: art5,
+      title: 'arte 3'
+    },
+    {
+      img: art4,
+      title: 'arte 1',
+    },
+    { 
+      img: art013,
+      title: 'arte 2',
+    },
+    {
+      img: art6,
+      title: 'arte 3'
+    },
+    {
+      img: art7,
+      title: 'arte 1',
+    },
+    { 
+      img: art8,
+      title: 'arte 2',
+    },
+    {
+      img: art9,
+      title: 'arte 3'
+    },
+    {
+      img: art010,
+      title: 'arte 1',
+    },
+    { 
+      img: art011,
+      title: 'arte 2',
+    },
+    {
+      img: art012,
+      title: 'arte 3'
+    },
+    {
+      img: art3,
+      title: 'arte 3'
+    },
+  ]
+
   return (
     <Box>
       <h1 className='title'>Illustrations</h1>
-      <ImageList variant="masonry" cols={3} gap={8} id="big-image-feed-box">
-        {itemData.map((item) => (
-          <div className="img-component"> 
-            <a key={item.img} href={item.img} target="_blank" rel="noreferrer" className="img-link">           
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=248&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  className="image-feed"
-                />
-              </ImageListItem>
-            </a>
+
+      {/* big feed */}
+      <ImageList variant="masonry" cols={3} gap={8} id="big-image-feed-box image-link">
+        {itemData.map((item, index) => (
+          <div className="img-component" key={index}>
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={`Imagem ${index + 1}`}
+                loading="lazy"
+                className="image-feed"
+                onClick={() => openModal(item.img)}
+              />
+            </ImageListItem>
           </div>
-          ))
-        }
+        ))}
       </ImageList>
 
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Visualização de Imagem"
+      >
+        {selectedImage && (
+          <div>
+            <img src={selectedImage} alt="Imagem em destaque" />
+            <button onClick={closeModal}>Fechar</button>
+          </div>
+        )}
+      </Modal>
+
+      {/* small feed */}
       <ImageList variant="masonry" cols={2} gap={7} id="sm-image-feed-box">
         {itemData.map((item) => (
           <div className="img-component"> 
@@ -79,64 +164,13 @@ const IllustraComp = () => {
           ))
         }
       </ImageList>
+
+      {/* modal/lightbox */}
+
+
     </Box>
   )
 }
-
-const itemData = [
-  {
-    img: art1,
-    title: 'arte 1',
-  },
-  { 
-    img: art2,
-    title: 'arte 2',
-  },
-  {
-    img: art5,
-    title: 'arte 3'
-  },
-  {
-    img: art4,
-    title: 'arte 1',
-  },
-  { 
-    img: art013,
-    title: 'arte 2',
-  },
-  {
-    img: art6,
-    title: 'arte 3'
-  },
-  {
-    img: art7,
-    title: 'arte 1',
-  },
-  { 
-    img: art8,
-    title: 'arte 2',
-  },
-  {
-    img: art9,
-    title: 'arte 3'
-  },
-  {
-    img: art010,
-    title: 'arte 1',
-  },
-  { 
-    img: art011,
-    title: 'arte 2',
-  },
-  {
-    img: art012,
-    title: 'arte 3'
-  },
-  {
-    img: art3,
-    title: 'arte 3'
-  },
-]
 
 /* <a href={item.img}>
   <ImageListItem>
