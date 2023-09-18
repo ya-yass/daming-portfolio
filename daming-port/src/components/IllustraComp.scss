@@ -1,0 +1,41 @@
+.img-component{
+  transition: 3s; 
+}
+
+
+.lightbox{
+  height: 100%;
+  width: 100%;
+  // backdrop-filter: blur(2px);
+
+  .enfeite{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+    .lightbox-div{
+      width: 80%;
+      height: 80%;
+      background-color: #000;
+      border-radius: 18px;
+
+      .lightbox-img-div{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+      }
+    
+      img{
+        height: 80%;
+      }
+    }  
+  }
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open{
+  background-color: #000000b3 !important;
+}

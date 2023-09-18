@@ -4,6 +4,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 // files
 import './IllustraComp.scss'
@@ -132,21 +133,8 @@ const IllustraComp = () => {
         ))}
       </ImageList>
 
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Visualização de Imagem"
-      >
-        {selectedImage && (
-          <div>
-            <img src={selectedImage} alt="Imagem em destaque" />
-            <button onClick={closeModal}>Fechar</button>
-          </div>
-        )}
-      </Modal>
-
       {/* small feed */}
-      <ImageList variant="masonry" cols={2} gap={7} id="sm-image-feed-box">
+      <ImageList variant="masonry" cols={2} gap={7} id="sm-image-feed-box image-link">
         {itemData.map((item) => (
           <div className="img-component"> 
             <a key={item.img} href={item.img} target="_blank" rel="noreferrer" className="img-link">           
@@ -166,7 +154,24 @@ const IllustraComp = () => {
       </ImageList>
 
       {/* modal/lightbox */}
-
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Visualização de Imagem"
+        className="lightbox"
+      >
+        {selectedImage && (
+          <div className="enfeite">
+            <div className="lightbox-div">
+              <div className="lightbox-img-div">
+                <img src={selectedImage} alt="Daming's art" />
+                <button className="close" onClick={closeModal}> <CloseRoundedIcon/> </button>
+              </div>
+            </div>
+          </div>
+          
+        )}
+      </Modal>
 
     </Box>
   )
